@@ -1,7 +1,7 @@
 const aws = require('aws-sdk');
-const lambda = new aws.Lambda({apiVersion: '2015-03-31'});
+const lambda = new aws.Lambda({ apiVersion: '2015-03-31' });
 
-exports.handler =  async function(event, context) {
+exports.handler = async function (event, context) {
   const puppeteerFunctionName = process.env.puppeteerFunctionName;
   const bucketName = process.env.bucketName;
   console.log('Puppeteer Lambda Function Name:', puppeteerFunctionName);

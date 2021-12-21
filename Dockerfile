@@ -10,8 +10,8 @@ RUN amazon-linux-extras install epel -y
 RUN yum install -y chromium
 
 ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
-    AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
-    AWS_REGION=$AWS_REGION
+  AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
+  AWS_REGION=$AWS_REGION
 
 COPY jest.config.js package*.json tsconfig.json ${LAMBDA_TASK_ROOT}/
 COPY bin/app.ts ${LAMBDA_TASK_ROOT}/bin/

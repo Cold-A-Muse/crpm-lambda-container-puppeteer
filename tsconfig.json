@@ -5,7 +5,9 @@
     "experimentalDecorators": true,
     "inlineSourceMap": true,
     "inlineSources": true,
-    "lib": ["es2018"],
+    "lib": [
+      "es2018"
+    ],
     "module": "commonjs",
     "noFallthroughCasesInSwitch": false,
     "noImplicitAny": false,
@@ -23,5 +25,7 @@
     "**/*.ts",
     "**/*.d.ts"
   ],
-  "exclude": ["infra"]
+  "exclude": [
+    "infra"
+  ]
 }
