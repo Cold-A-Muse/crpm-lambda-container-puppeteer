@@ -1,0 +1,22 @@
+{
+  "Records": [
+    {
+      "EventSource": "aws:sns",
+      "EventVersion": "1.0",
+      "EventSubscriptionArn": "arn:aws:sns:eu-central-1:118627563984:haasApiReport:a485682f-7ff5-4a18-8f78-eb7ca3b24c22",
+      "Sns": {
+        "Type": "Notification",
+        "MessageId": "75b6b131-9639-5ac6-a4bd-eb0e13ea080d",
+        "TopicArn": "arn:aws:sns:eu-central-1:118627563984:haasApiReport",
+        "Subject": null,
+        "Message": "{\"API_URL\":\"https: //jrw3wc.expose.sh/graphql\",\"AUTHENTICATE_EMAIL\":\"automations@haas.live\",\"DASHBOARD_URL\":\"https://33e0-2404-c0-3091-3b43-89f1-4f94-ad99-bcbc.ngrok.io\",\"REPORT_URL\":\"https://33e0-2404-c0-3091-3b43-89f1-4f94-ad99-bcbc.ngrok.io/dashboard/b/lufthansa2/d/default/_reports/weekly\",\"WORKSPACE_EMAIL\":\"lufthansa2@haas.live\"}",
+        "Timestamp": "2021-12-24T08:23:47.369Z",
+        "SignatureVersion": "1",
+        "Signature": "oly8e10Fn/bPFBesDKMtadc7uj3FjJwa5nJ4LVDN7YLp4pw37Z72dbD/XkUt1n7KePZWTbSJf0hogHcusxpQNBkB5gFzH6Mq/jGgwh4eT+ySLBjB6UbCyPifuPzqWXDWzVOoOmwmmnQag7usl77ffnDFmvMpsCNdtqu8HkZ2QhyRLMSjCvWvWyB29bBhdCUoBJIqWL/rmdB22cQiH7gCymuB5uR13ErkN6gh9sVVlitRWmc9QuXXVTGFYfpjfbJcRskBF7cx/Uy95zQ72VEi5B7pZqe5p3cDkefV8OVB2dOgBQjU2UjU+X/9i7oGx/nzR3jYuHxkDMzKi2XMvOJn6A==",
+        "SigningCertUrl": "https://sns.eu-central-1.amazonaws.com/SimpleNotificationService-7ff5318490ec183fbaddaa2a969abfda.pem",
+        "UnsubscribeUrl": "https://sns.eu-central-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:eu-central-1:118627563984:haasApiReport:a485682f-7ff5-4a18-8f78-eb7ca3b24c22",
+        "MessageAttributes": {}
+      }
+    }
+  ]
+}

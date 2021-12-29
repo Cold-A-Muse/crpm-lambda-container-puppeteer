@@ -87,11 +87,13 @@ export const lambdaHandler = async (event: any, context: Context) => {
   console.log(`URL: ${url}`);
   console.log('ENV: ', process.env);
 
-  const apiUrl: string = event.API_URL;
-  const dashboardUrl: string = event.DASHBOARD_URL;
-  const authenticateEmail: string = event.AUTHENTICATE_EMAIL;
-  const workspaceEmail: string = event.WORKSPACE_EMAIL;
-  const reportUrl: string = event.REPORT_URL
+  console.log('EVENT: ', event.Records?.[0]?.Sns.Message, 'Type: ', typeof event.Records?.[0]?.Sns.Message);
+  const message = JSON.parse(event.Records?.[0]?.Sns.Message)
+  const apiUrl: string = message.API_URL;
+  const dashboardUrl: string = message.DASHBOARD_URL;
+  const authenticateEmail: string = message.AUTHENTICATE_EMAIL;
+  const workspaceEmail: string = message.WORKSPACE_EMAIL;
+  const reportUrl: string = message.REPORT_URL;
 
   const authorizationKey: string = process.env.AUTOMATION_API_KEY;
 
@@ -213,15 +215,15 @@ export const lambdaHandler = async (event: any, context: Context) => {
 
       // console.log('Local storage #2: ', ls);
       // TODO: Try below snippet store in localstorage the token
-      await page.evaluateOnNewDocument(
-        token => {
-          localStorage.setItem('access_token', token);
-        }, result?.data.authenticateLambda);
+      // await page.evaluateOnNewDocument(
+      //   token => {
+      //     localStorage.setItem('access_token', token);
+      //   }, result?.data.authenticateLambda);
 
+      console.log('Going to: ', reportUrl);
       await page.goto(reportUrl, { waitUntil: 'networkidle0' });
       const localStorageFourth = await page.evaluate(() => JSON.stringify(Object.assign({}, window.localStorage)));
       console.log('New page storage: ', localStorageFourth)
-
 
       await page.waitForTimeout(20000);
       // await page.goto(reportUrl, { waitUntil: 'networkidle0' });
